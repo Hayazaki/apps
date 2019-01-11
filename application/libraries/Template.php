@@ -11,7 +11,7 @@ class Template {
     }
 
 
-    public function template_render($content, $data = NULL)
+    public function display($content, $data = NULL)
     {
         if ( ! $content)
         {
@@ -19,12 +19,14 @@ class Template {
         }
         else
         {
-            $this->template['header']          = $this->CI->load->view('_partials/header', $data, TRUE);
+            $this->template['meta']          = $this->CI->load->view('_partials/meta', $data, TRUE);
             $this->template['main_header']     = $this->CI->load->view('_partials/main_header', $data, TRUE);
             $this->template['main_sidebar']    = $this->CI->load->view('_partials/main_sidebar', $data, TRUE);
             $this->template['content']         = $this->CI->load->view($content, $data, TRUE);
-            $this->template['control_sidebar'] = $this->CI->load->view('_partials/control_sidebar', $data, TRUE);
             $this->template['footer']          = $this->CI->load->view('_partials/footer', $data, TRUE);
+            $this->template['control_sidebar'] = $this->CI->load->view('_partials/control_sidebar', $data, TRUE);
+            $this->template['js']              = $this->CI->load->view('_partials/js', $data, TRUE);
+
 
             return $this->CI->load->view('_partials/template', $this->template);
         }
