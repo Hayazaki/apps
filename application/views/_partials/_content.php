@@ -12,7 +12,7 @@
 
   <!-- Main content -->
   <section class="content">
-
+    MASUKAN ISI KONTEN DISINI
   </section>
 </div>
 <!-- /.content-wrapper -->

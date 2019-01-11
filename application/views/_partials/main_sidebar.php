@@ -45,9 +45,9 @@
         </span>
       </a>
       <ul class="treeview-menu">
-        <li><a href="#"><i class="fa fa-circle-o"></i>Stock Access Point</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i>Access Point Masuk</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i>Access Point Keluar</a></li>
+        <li><a href="<?php echo site_url('ap/stock/index'); ?>"><i class="fa fa-circle-o"></i>Stock Access Point</a></li>
+        <li><a href="<?php echo site_url('ap/masuk/index'); ?>"><i class="fa fa-circle-o"></i>Access Point Masuk</a></li>
+        <li><a href="<?php echo site_url('ap/keluar/index'); ?>"><i class="fa fa-circle-o"></i>Access Point Keluar</a></li>
       </ul>
     </li>
     <li class="treeview">
