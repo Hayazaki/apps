@@ -36,7 +36,7 @@
         <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
       </ul>
     </li>
-    <li class="active treeview">
+    <li class="treeview">
       <a href="#">
         <i class="fa fa-wifi"></i>
         <span>Access Point</span>
@@ -52,16 +52,16 @@
     </li>
     <li class="treeview">
       <a href="#">
-        <i class="fa fa-user"></i>
+        <i class="fa fa-users"></i>
         <span>User Management</span>
         <span class="pull-right-container">
           <span class="label label-primary pull-right">4</span>
         </span>
       </a>
       <ul class="treeview-menu">
-        <li><a href="#"><i class="fa fa-circle-o"></i>Lihat User</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i>Tambah User</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i>Edit User</a></li>
+        <li><a href="<?php echo site_url('users/index'); ?>"><i class="fa fa-user"></i>Lihat User</a></li>
+        <li><a href="<?php echo site_url('users/create'); ?>"><i class="fa fa-user"></i>Tambah User</a></li>
+        <li><a href="<?php echo site_url('users/edit'); ?>"><i class="fa fa-user"></i>Edit User</a></li>
       </ul>
     </li>
   </ul>

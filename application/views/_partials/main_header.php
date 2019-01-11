@@ -1,5 +1,5 @@
 <!-- Logo -->
-<a href="<?php echo base_url('#'); ?>" class="logo">
+<a href="<?php echo site_url('dashboard'); ?>" class="logo">
   <!-- mini logo for sidebar mini 50x50 pixels -->
   <span class="logo-mini"><span class="fa fa-wifi"></span></span>
   <!-- logo for regular state and mobile devices -->
@@ -108,8 +108,8 @@
             <img src="<?php echo base_url('assets/template/')?>dist/img/user.jpg" class="img-circle" alt="User Image">
 
             <p>
-              Administrator - Web Developer
-              <small>Member since Nov. 2012</small>
+              Administrator - Helpdesk
+              <small>Witel Balikpapan</small>
             </p>
           </li>
           <!-- Menu Body -->
