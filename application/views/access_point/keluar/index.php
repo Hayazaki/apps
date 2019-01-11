@@ -12,9 +12,9 @@
 
   <!-- Main content -->
   <section class="content">
-    <div class="box">
+    <div class="box box-danger">
       <div class="box-header">
-        <h3 class="box-title">Stock Access Point</h3>
+        <h3 class="box-title">Data Keluar</h3>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
