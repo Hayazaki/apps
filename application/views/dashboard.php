@@ -146,13 +146,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php echo base_url('assets/template/')?>dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="<?php echo base_url('assets/template/')?>dist/img/user.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Administrator</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?php echo base_url('assets/template/')?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="<?php echo base_url('assets/template/')?>dist/img/user.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Administrator - Web Developer
@@ -200,7 +200,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?php echo base_url('assets/template/')?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="<?php echo base_url('assets/template/')?>dist/img/user.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Administrator</p>
@@ -233,16 +233,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-wifi"></i>
+            <span>Access Point</span>
+            <span class="pull-right-container">
+              <span class="label label-primary pull-right"></span>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i>Stock Access Point</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Access Point Masuk</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Access Point Keluar</a></li>
+          </ul>
+        </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-laptop"></i>
-            <span>Access Point</span>
+            <i class="fa fa-user"></i>
+            <span>User Management</span>
             <span class="pull-right-container">
               <span class="label label-primary pull-right">4</span>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Lihat User</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Tambah User</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Edit User</a></li>
           </ul>
         </li>
       </ul>
