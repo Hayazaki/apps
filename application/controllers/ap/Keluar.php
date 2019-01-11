@@ -6,7 +6,7 @@ class Stock extends CI_Controller {
 	public function __construct()
 	{
 	    parent::__construct();
-      $this->data['title'] = "Stock Access Point";
+      $this->data['title'] = "Access Point";
 	}
 
 	public function index()
