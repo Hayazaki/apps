@@ -46,11 +46,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="<?php echo base_url() ?>" class="logo">
+    <a href="<?php echo base_url('#'); ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>W</b>ifi</span>
+      <span class="logo-mini"><span class="fa fa-wifi"></span></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Wifi</b>.id Balikpapan</span>
+      <span class="logo-lg"><span class="fa fa-wifi"></span><i>wifi.id</i><b> Balikpapan</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
