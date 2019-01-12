@@ -38,16 +38,16 @@
     </li>
     <li class="treeview">
       <a href="#">
-        <i class="fa fa-wifi"></i>
+        <i class="fa fa-cubes"></i>
         <span>Access Point</span>
         <span class="pull-right-container">
           <span class="label label-primary pull-right"></span>
         </span>
       </a>
       <ul class="treeview-menu">
-        <li><a href="<?php echo site_url('ap/stock/index'); ?>"><i class="fa fa-circle-o"></i>Stock Access Point</a></li>
-        <li><a href="<?php echo site_url('ap/masuk/index'); ?>"><i class="fa fa-circle-o"></i>Access Point Masuk</a></li>
-        <li><a href="<?php echo site_url('ap/keluar/index'); ?>"><i class="fa fa-circle-o"></i>Access Point Keluar</a></li>
+        <li><a href="<?php echo site_url('ap/stock/index'); ?>"><i class="fa fa-cube"></i>Stock Access Point</a></li>
+        <li><a href="<?php echo site_url('ap/masuk/index'); ?>"><i class="fa fa-cube"></i>Access Point Masuk</a></li>
+        <li><a href="<?php echo site_url('ap/keluar/index'); ?>"><i class="fa fa-cube"></i>Access Point Keluar</a></li>
       </ul>
     </li>
     <li class="treeview">

@@ -18,22 +18,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <section class="content">
     <!-- Small boxes (Stat box) -->
     <div class="row">
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-2 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3>150</h3>
+            <h3>-</h3>
 
-            <p>Stock AP Tersedia</p>
+            <p>Stock AP Baru (soon)</p>
           </div>
           <div class="icon">
-            <i class="ion ion-bag"></i>
+            <i class="fa fa-cubes"></i>
           </div>
-          <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo site_url('users/index'); ?>" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-2 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-blue">
+          <div class="inner">
+            <h3>150</h3>
+
+            <p>Total Stock AP</p>
+          </div>
+          <div class="icon">
+            <i class="fa fa-cubes"></i>
+          </div>
+          <a href="<?php echo site_url('ap/stock/index'); ?>" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-2 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
@@ -42,13 +57,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <p>Total AP Masuk</p>
           </div>
           <div class="icon">
-            <i class="ion ion-stats-bars"></i>
+            <i class="fa fa-cubes"></i>
           </div>
-          <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo site_url('ap/masuk/index'); ?>" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-2 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
@@ -57,24 +72,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <p>Total AP Keluar</p>
           </div>
           <div class="icon">
-            <i class="ion ion-pie-graph"></i>
+            <i class="fa fa-cubes"></i>
           </div>
-          <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo site_url('ap/keluar/index'); ?>" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-2 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-navy">
+          <div class="inner">
+            <h3>-</h3>
+
+            <p>Total AP Rusak (Dev)</p>
+          </div>
+          <div class="icon">
+            <i class="fa fa-gears"></i>
+          </div>
+          <a href="<?php echo site_url('ap/keluar/index'); ?>" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-2 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
-            <h3>44</h3>
+            <h3>-</h3>
 
-            <p>User</p>
+            <p>Total AP Repair (Dev)</p>
           </div>
           <div class="icon">
-            <i class="ion ion-person-add"></i>
+            <i class="fa fa-gears"></i>
           </div>
-          <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo site_url('ap/keluar/index'); ?>" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
