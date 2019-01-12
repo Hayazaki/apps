@@ -9,7 +9,7 @@ class Apkeluar_model extends CI_Model{
     //Codeigniter : Write Less Do More
   }
 
-  public function getall_stockap()
+  public function getall_apkeluar()
   {
     return $this->db->get('tb_apkeluar')->result_array();
   }
