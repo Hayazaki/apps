@@ -35,3 +35,10 @@
 <script src="<?php echo base_url('assets/template/')?>dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('assets/template/')?>dist/js/demo.js"></script>
+<!-- Delete Modal -->
+<script>
+function deleteConfirm(url){
+	$('#btn-delete').attr('href', url);
+	$('#deleteModal').modal();
+}
+</script>

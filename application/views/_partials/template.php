@@ -26,13 +26,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     echo $main_sidebar;
     ?>
   </aside>
-  
+
   <!-- content -->
     <?php // content from view
     if (isset($content))
     echo $content;
     ?>
   <!-- /.content -->
+  <?php // Modal from view
+  if (isset($modal))
+  echo $modal;
+  ?>
 
   <!-- Control Sidebar -->
     <?php

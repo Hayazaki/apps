@@ -21,22 +21,26 @@
         <table id="example1" class="table table-bordered table-striped">
           <thead>
           <tr>
-            <?php $no=1 ?>
             <th class="">No.</th>
             <th>Serial Number</th>
             <th>Mac Address</th>
             <th>Model</th>
+            <th>Kondisi</th>
             <th>Keterangan</th>
             <th>Action</th>
           </tr>
           </thead>
           <tbody>
+          <?php
+          $no = 1;
+          foreach ($stockap as $stock){ ?>
           <tr>
-            <td>1</td>
-            <td>KWC224B1330</td>
-            <td>00:B2:70:55:31</td>
-            <td>AIR-AP180C920-C-K9</td>
-            <td>AP Baru datang 72 Unit</td>
+            <td><?php echo $no++ ?>.</td>
+            <td><?php echo $stock['serial_number']; ?></td>
+            <td><?php echo $stock['mac_address']; ?></td>
+            <td><?php echo $stock['jenis_ap']; ?></td>
+            <td><?php echo $stock['kondisi']; ?></td>
+            <td><?php echo $stock['keterangan']; ?></td>
             <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal-default">
                 Edit
               </button>
@@ -45,6 +49,7 @@
                 </button>
             </td>
           </tr>
+          <?php } ?>
           </tbody>
         </table>
       </div>

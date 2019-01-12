@@ -27,6 +27,7 @@
             <th>Serial Number</th>
             <th>Mac Address</th>
             <th>Model</th>
+            <th>Kondisi</th>
             <th>Petugas</th>
             <th>Keperluan</th>
             <th>Action</th>
@@ -39,8 +40,9 @@
             <td>KWC224B1330</td>
             <td>00:B2:70:55:31</td>
             <td>AIR-AP180C920-C-K9</td>
+            <td>Baru</td>
             <td>WITEL</td>
-            <td>AP Baru datang 72 Unit</td>
+            <td>Instalasi Pelanggan</td>
             <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal-default">
                 Edit
               </button>

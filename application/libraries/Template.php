@@ -23,6 +23,7 @@ class Template {
             $this->template['main_header']     = $this->CI->load->view('_partials/main_header', $data, TRUE);
             $this->template['main_sidebar']    = $this->CI->load->view('_partials/main_sidebar', $data, TRUE);
             $this->template['content']         = $this->CI->load->view($content, $data, TRUE);
+            $this->template['modal']           = $this->CI->load->view('_partials/modal', $data, TRUE);
             $this->template['footer']          = $this->CI->load->view('_partials/footer', $data, TRUE);
             $this->template['control_sidebar'] = $this->CI->load->view('_partials/control_sidebar', $data, TRUE);
             $this->template['js']              = $this->CI->load->view('_partials/js', $data, TRUE);
