@@ -15,7 +15,9 @@
     <div class="box box-success">
       <div class="box-header">
         <h3 class="box-title"><?php echo $subtitle; ?></h3>
-        <div class="btn-group pull-right">
+      </div>
+      <div class="box-header">
+        <div class="btn-group">
           <button type="button" class="btn btn-success">Tambah Stock</button>
           <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
@@ -24,14 +26,14 @@
           <ul class="dropdown-menu" role="menu">
             <li><a href="#"><span class="fa fa-plus"></span>Per-Unit</a></li>
             <li class="disabled"><a href="#"><span class="fa fa-file-text"></span>Import .txt (vBeta)</a></li>
-            <li class="disabled"><a href="#"><span class="fa  fa-file-excel-o"></span>Import .xlsx (vBeta)</a></li>
+            <li class="disabled"><a href="#"><span class="fa fa-file-excel-o"></span>Import .xlsx (vBeta)</a></li>
             <li class="disabled"><a href="#"><span class="fa fa-file"></span>Import .csv (vBeta)</a></li>
           </ul>
         </div>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
-        <table id="example1" class="table table-bordered table-striped">
+        <table id="example" class="table table-bordered table-striped">
           <thead>
           <tr>
             <th class="">No.</th>
@@ -56,7 +58,7 @@
             <td><?php echo $t['jenis_ap']; ?></td>
             <td><?php echo $t['kondisi']; ?></td>
             <td><?php echo $t['keterangan']; ?></td>
-            <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal-default">
+            <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal-masuk">
                 <span class="fa fa-pencil"></span> Edit
               </button>
               <a onclick="deleteConfirm('<?php echo site_url('ap/masuk/remove/'.$t['id']); ?>')"

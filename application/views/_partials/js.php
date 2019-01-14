@@ -49,23 +49,13 @@
       autoclose: false,
       format: "yyyy-mm-dd"
     });
-    $(function () {
-      $('#example1').DataTable()
-      $('#example2').DataTable({
-        'paging'      : true,
-        'lengthChange': true,
-        'searching'   : true,
-        'ordering'    : true,
-        'info'        : true,
-        'autoWidth'   : true,
-        'hover'       : true
-      });
-    });
-    $(document).ready(function() {
+  });
+  $(function () {
     $('#example').DataTable({
-      "autoWidth"     : true,
-      "lengthChange"  : true
-      });
+      'paging'      : true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true
     });
   });
 </script>

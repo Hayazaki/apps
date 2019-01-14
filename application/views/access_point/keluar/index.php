@@ -18,7 +18,7 @@
       </div>
       <!-- /.box-header -->
       <div class="box-body">
-        <table id="example1" class="table table-bordered table-striped">
+        <table id="example" class="table table-bordered table-striped">
           <thead>
           <tr>
             <th class="">No.</th>
@@ -43,10 +43,10 @@
             <td><?php echo $keluar['jenis_ap']; ?></td>
             <td><?php echo $keluar['petugas']; ?></td>
             <td><?php echo $keluar['keperluan']; ?></td>
-            <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal-default">
+            <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal-edit-keluar">
                 <span class="fa fa-pencil"></span> Edit
-              </button>
-              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-danger">
+                </button>
+                <button type="button" class="btn btn-danger btn-xs disable" data-toggle="modal" data-target="#modal-danger">
                   <span class="fa fa-trash"></span> Hapus
                 </button>
             </td>
