@@ -22,7 +22,7 @@ class Apmasuk_model extends CI_Model
     /*
      * Get all apmasuk
      */
-    function get_all_apmasuk()
+    function getall_apmasuk()
     {
         $this->db->order_by('id', 'desc');
         return $this->db->get('tb_apmasuk')->result_array();

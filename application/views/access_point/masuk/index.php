@@ -25,10 +25,10 @@
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Per-Unit</a></li>
-            <li class="disabled"><a href="#">Import .txt (vBeta)</a></li>
-            <li class="disabled"><a href="#">Import .xlsx (vBeta)</a></li>
-            <li class="disabled"><a href="#">Import .csv (vBeta)</a></li>
+            <li><a href="#"><span class="fa fa-plus"></span>Per-Unit</a></li>
+            <li class="disabled"><a href="#"><span class="fa fa-file-text"></span>Import .txt (vBeta)</a></li>
+            <li class="disabled"><a href="#"><span class="fa  fa-file-excel-o"></span>Import .xlsx (vBeta)</a></li>
+            <li class="disabled"><a href="#"><span class="fa fa-file"></span>Import .csv (vBeta)</a></li>
           </ul>
         </div>
         <table id="example1" class="table table-bordered table-striped">
