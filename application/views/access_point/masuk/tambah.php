@@ -28,20 +28,20 @@
                 <div class="input-group-addon">
                   <i class="fa fa-calendar"></i>
                 </div>
-                <input name="tanggal_masuk" class="form-control" id="datepicker" placeholder="YYYY-MM-DD">
+                <input type="text" name="tanggal_masuk" value="<?php echo $this->input->post('tanggal_masuk'); ?>" class="form-control" id="datepicker" />
               </div>
             </div>
             <div class="form-group">
               <label>Serial Number<span style="color:red;">*</span></label>
-              <input type="text" name="serial_number" value="<?php echo $this->input->post('serial_number'); ?>" class="form-control" placeholder="Contoh: KWC21270KX0">
+              <input type="text" name="serial_number" value="<?php echo $this->input->post('serial_number'); ?>" class="form-control" placeholder="Contoh: KWC21270KX0" />
             </div>
             <div class="form-group">
               <label>Mac Address<span style="color:red;">*</span></label>
-              <input type="text" name="mac_address" value="<?php echo $this->input->post('mac_address'); ?>" class="form-control" placeholder="Contoh: B838617A7C8D">
+              <input type="text" name="mac_address" value="<?php echo $this->input->post('mac_address'); ?>" class="form-control" placeholder="Contoh: B838617A7C8D" />
             </div>
             <div class="form-group">
               <label>Model AP</label>
-              <input type="text" name="jenis_ap" value="<?php echo $this->input->post('jenis_ap'); ?>" class="form-control" placeholder="Contoh: AIR-AP1832I-F-K9">
+              <input type="text" name="jenis_ap" value="<?php echo $this->input->post('jenis_ap'); ?>" class="form-control" placeholder="Contoh: AIR-AP1832I-F-K9" />
             </div>
             <div class="form-group">
               <label>Kondisi</label>
@@ -53,7 +53,6 @@
 									'Bekas'=>'BEKAS',
 									'Rusak'=>'RUSAK',
 								);
-
 								foreach($kondisi_values as $value => $display_text)
 								{
 									$selected = ($value == $this->input->post('kondisi')) ? ' selected="selected"' : "";

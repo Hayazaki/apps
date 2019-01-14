@@ -46,9 +46,9 @@
   }
   $(function () { // Date Picker
     $('#datepicker').datepicker({
-      autoclose: false,
-      format: "yyyy-mm-dd"
-    });
+      autoclose : true,
+      format    : "yyyy-mm-dd"
+    }).datepicker("setDate",'now');
   });
   $(function () {
     $('#example').DataTable({
