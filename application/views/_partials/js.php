@@ -37,8 +37,14 @@
 <script src="<?php echo base_url('assets/template/')?>dist/js/demo.js"></script>
 <!-- Delete Modal -->
 <script>
-function deleteConfirm(url){
-	$('#btn-delete').attr('href', url);
-	$('#deleteModal').modal();
-}
+  function deleteConfirm(url){ // Modal Delete
+	  $('#btn-delete').attr('href', url);
+	  $('#deleteModal').modal();
+  }
+  $(function () { // Date Picker
+    $('#datepicker').datepicker({
+      autoclose: false,
+      format: "yyyy-mm-dd"
+    });
+  });
 </script>

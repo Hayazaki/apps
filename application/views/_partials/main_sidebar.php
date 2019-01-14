@@ -24,11 +24,11 @@
   <!-- sidebar menu: : style can be found in sidebar.less -->
   <ul class="sidebar-menu" data-widget="tree">
     <li class="header">MAIN NAVIGATION</li>
-    <li class="active treeview">
+    <li class="treeview">
       <a href="#">
         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         <span class="pull-right-container">
-          <i class="fa fa-angle-left pull-right"></i>
+          <i class="pull-right"></i>
         </span>
       </a>
       <ul class="treeview-menu">
@@ -41,7 +41,7 @@
         <i class="fa fa-cubes"></i>
         <span>Access Point</span>
         <span class="pull-right-container">
-          <span class="label label-primary pull-right"></span>
+          <span class="fa fa-angle-left pull-right"></span>
         </span>
       </a>
       <ul class="treeview-menu">
@@ -55,7 +55,7 @@
         <i class="fa fa-users"></i>
         <span>User Management</span>
         <span class="pull-right-container">
-          <span class="label label-primary pull-right">4</span>
+          <span class="label label-primary pull-right"></span>
         </span>
       </a>
       <ul class="treeview-menu">
