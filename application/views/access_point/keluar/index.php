@@ -5,7 +5,7 @@
       <?php echo $title; ?>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="<?php echo site_url('dashboard/index'); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Access Point</li>
     </ol>
   </section>
@@ -54,44 +54,6 @@
           <?php } ?>
           </tbody>
         </table>
-      </div>
-    </div>
-    <!-- Modal Edit Stock -->
-    <div class="modal fade" id="modal-default">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Edit</h4>
-          </div>
-          <div class="modal-body">
-            <p>Edit Stock</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-            <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal Keluarkan Stock -->
-    <div class="modal modal-danger fade" id="modal-danger">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Keluarkan Stock</h4>
-          </div>
-          <div class="modal-body">
-            <p><h4>Apakah anda yakin ?</h4></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
-            <button type="submit" name="keluar" class="btn btn-outline">Ya, Lanjutkan</button>
-          </div>
-        </div>
       </div>
     </div>
   </section>

@@ -5,7 +5,7 @@
       <?php echo $title; ?>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="<?php echo site_url('dashboard/index'); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Access Point</li>
     </ol>
   </section>
@@ -15,10 +15,7 @@
     <div class="box box-success">
       <div class="box-header">
         <h3 class="box-title"><?php echo $subtitle; ?></h3>
-      </div>
-      <!-- /.box-header -->
-      <div class="box-body">
-        <div class="btn-group">
+        <div class="btn-group pull-right">
           <button type="button" class="btn btn-success">Tambah Stock</button>
           <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
@@ -31,6 +28,9 @@
             <li class="disabled"><a href="#"><span class="fa fa-file"></span>Import .csv (vBeta)</a></li>
           </ul>
         </div>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
         <table id="example1" class="table table-bordered table-striped">
           <thead>
           <tr>

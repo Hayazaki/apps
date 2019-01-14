@@ -5,7 +5,7 @@
       <?php echo $title; ?>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="<?php echo site_url('dashboard/index'); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Access Point</li>
     </ol>
   </section>
@@ -18,7 +18,7 @@
       </div>
       <!-- /.box-header -->
       <div class="box-body">
-        <table id="example1" class="table table-bordered table-striped">
+        <table id="example" class="table table-bordered table-hover">
           <thead>
           <tr>
             <th class="">No.</th>

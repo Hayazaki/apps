@@ -25,6 +25,9 @@
 <script src="<?php echo base_url('assets/template/')?>bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="<?php echo base_url('assets/template/')?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url('assets/template/')?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url('assets/template/')?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <!-- Slimscroll -->
 <script src="<?php echo base_url('assets/template/')?>bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
@@ -45,6 +48,24 @@
     $('#datepicker').datepicker({
       autoclose: false,
       format: "yyyy-mm-dd"
+    });
+    $(function () {
+      $('#example1').DataTable()
+      $('#example2').DataTable({
+        'paging'      : true,
+        'lengthChange': true,
+        'searching'   : true,
+        'ordering'    : true,
+        'info'        : true,
+        'autoWidth'   : true,
+        'hover'       : true
+      });
+    });
+    $(document).ready(function() {
+    $('#example').DataTable({
+      "autoWidth"     : true,
+      "lengthChange"  : true
+      });
     });
   });
 </script>
