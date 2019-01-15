@@ -101,7 +101,7 @@
           </div>
           <div class="box-footer">
                 <a class="btn btn-default" href="javascript:history.back(1)">Kembali</a>
-                <button type="submit" class="btn btn-primary pull-right">Simpan</button>
+                <button type="submit" class="btn btn-success pull-right">Simpan</button>
           </div>
         <?php echo form_close(); ?>
       </div>
