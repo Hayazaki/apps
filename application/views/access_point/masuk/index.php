@@ -18,7 +18,7 @@
       </div>
       <div class="box-header">
         <div class="btn-group">
-          <button type="button" class="btn btn-success">Tambah Stock</button>
+          <a class="btn btn-success" href="javascript:void(0)" onclick="window.location.href('<?php echo site_url('ap/masuk/tambah'); ?>')">Tambah Stock</a>
           <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
             <span class="sr-only">Toggle Dropdown</span>

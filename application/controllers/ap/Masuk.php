@@ -23,8 +23,9 @@ class Masuk extends CI_Controller {
   {
 			$this->data['subtitle']	= "Input Barang Masuk";
 
-			$this->form_validation->set_rules('serial_number','Serial Number','required');
+			$this->form_validation->set_rules('serial_number','Serial Number','required|alpha_numeric');
 			$this->form_validation->set_rules('mac_address','Mac Address','required');
+			$this->form_validation->set_rules('jenis_ap','Jenis Ap','required');
 
 			if($this->form_validation->run() === TRUE)
         {
@@ -41,7 +42,7 @@ class Masuk extends CI_Controller {
 				redirect('ap/masuk/tambah');
 				}else {
 					$this->template->display('access_point/masuk/tambah', $this->data);
-					$this->session->set_flashdata('gagal_input', 'Gagal memasukan data kedalam database.');
+					$this->session->set_flashdata('gagal_input', 'Gagal memasukan data kedalam database, mohon periksa kembali data yang akan diinput.');
 				}
 	}
 

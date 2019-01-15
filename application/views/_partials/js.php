@@ -55,7 +55,8 @@
       'paging'      : true,
       'searching'   : true,
       'ordering'    : true,
-      'info'        : true
+      'info'        : true,
+      'hover'       : true
     });
   });
 </script>
