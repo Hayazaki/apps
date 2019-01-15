@@ -29,22 +29,26 @@
                   <i class="fa fa-calendar"></i>
                 </div>
                 <input type="text" name="tanggal_masuk" value="<?php echo $this->input->post('tanggal_masuk'); ?>" class="form-control" id="datepicker" />
+                <span><?php echo form_error('tanggal_masuk'); ?></span>
               </div>
             </div>
             <div class="form-group">
               <label>Serial Number<span style="color:red;">*</span></label>
               <input type="text" name="serial_number" value="<?php echo $this->input->post('serial_number'); ?>" class="form-control" placeholder="Contoh: KWC21270KX0" />
+              <span><?php echo form_error('serial_number'); ?></span>
             </div>
             <div class="form-group">
               <label>Mac Address<span style="color:red;">*</span></label>
               <input type="text" name="mac_address" value="<?php echo $this->input->post('mac_address'); ?>" class="form-control" placeholder="Contoh: B838617A7C8D" />
+              <span><?php echo form_error('mac_address'); ?></span>
             </div>
             <div class="form-group">
               <label>Model AP</label>
               <input type="text" name="jenis_ap" value="<?php echo $this->input->post('jenis_ap'); ?>" class="form-control" placeholder="Contoh: AIR-AP1832I-F-K9" />
             </div>
+            <div class="col-md-6">
             <div class="form-group">
-              <label>Kondisi</label>
+              <label>Kondisi<span style="color:red;">*</span></label>
               <select name="kondisi" class="form-control">
                 <option value="">-- Pilih --</option>
                 <?php
@@ -62,13 +66,18 @@
 								?>
               </select>
             </div>
+            </div>
+            <div class="col-md-8">
             <div class="form-group">
               <label for="keterangan" class="control-label">Keterangan</label>
               <input type="text" name="keterangan" value="<?php echo $this->input->post('keterangan'); ?>" class="form-control" id="keterangan" />
             </div>
+            </div>
+            <div class="col-md-12">
             <div class="form-group">
               <p class="help-block">(<span style="color:red;">*</span>) Wajib diisi.</p>
               <p>Pastikan semua telah terisi dengan benar sebelum menyimpan.</p>
+            </div>
             </div>
           </div>
           <div class="box-footer">

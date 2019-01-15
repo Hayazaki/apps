@@ -38,10 +38,10 @@ class Masuk extends CI_Controller {
             );
 				$apmasuk_id = $this->Apmasuk_model->add_apmasuk($params);
 				$this->session->set_flashdata('success_input', 'Data berhasil diinput kedalam database.');
-				$this->template->display('access_point/masuk/tambah', $this->data);
+				redirect('ap/masuk/tambah');
 				}else {
-					$this->session->set_flashdata('gagal_input', 'Gagal memasukan data kedalam database.');
 					$this->template->display('access_point/masuk/tambah', $this->data);
+					$this->session->set_flashdata('gagal_input', 'Gagal memasukan data kedalam database.');
 				}
 	}
 
