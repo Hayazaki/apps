@@ -37,7 +37,7 @@
           foreach ($apkeluar as $keluar){ ?>
           <tr>
             <td><?php echo $no++ ?>.</td>
-            <td><?php echo $keluar['tanggal_keluar']; ?></td>
+            <td><?php echo date("d/m/Y", strtotime($keluar['tanggal_keluar'])); ?></td>
             <td><?php echo $keluar['serial_number']; ?></td>
             <td><?php echo $keluar['mac_address']; ?></td>
             <td><?php echo $keluar['jenis_ap']; ?></td>

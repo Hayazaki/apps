@@ -18,7 +18,7 @@
       </div>
       <div class="box-header">
         <div class="btn-group">
-          <a class="btn btn-success" href="javascript:void(0)" onclick="window.location.href('<?php echo site_url('ap/masuk/tambah'); ?>')">Tambah Stock</a>
+          <a class="btn btn-success" onclick="window.location='<?php echo site_url('ap/masuk/tambah'); ?>'; ">Tambah Stock</a>
           <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
             <span class="sr-only">Toggle Dropdown</span>
@@ -52,7 +52,7 @@
           foreach($apmasuk as $t){ ?>
           <tr>
             <td><?php echo $no++ ?>.</td>
-            <td><?php echo $t['tanggal_masuk']; ?></td>
+            <td><?php echo date("d/m/Y", strtotime($t['tanggal_masuk'])); ?></td>
             <td><?php echo $t['serial_number']; ?></td>
             <td><?php echo $t['mac_address']; ?></td>
             <td><?php echo $t['jenis_ap']; ?></td>

@@ -42,7 +42,7 @@ class Masuk extends CI_Controller {
 				redirect('ap/masuk/tambah');
 				}else {
 					$this->template->display('access_point/masuk/tambah', $this->data);
-					$this->session->set_flashdata('gagal_input', 'Gagal memasukan data kedalam database, mohon periksa kembali data yang akan diinput.');
+					$this->session->set_flashdata('gagal_input', 'Tidak berhasil menginput data kedalam database, mohon periksa kembali data yang akan diinput.');
 				}
 	}
 
