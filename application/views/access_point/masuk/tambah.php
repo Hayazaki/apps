@@ -45,14 +45,14 @@
                 </div>
                 </div>
                 <div class="col-md-8">
-                <div class="form-group">
+                <div class="form-group <?php if(form_error('serial_number')) echo 'has-error';?>">
                   <label>Serial Number<span class="text-danger">*</span></label>
                   <input type="text" name="serial_number" value="<?php echo $this->input->post('serial_number'); ?>" class="form-control" placeholder="Contoh: KWC21270KX0" />
                   <span class="text-danger"><?php echo form_error('serial_number'); ?></span>
                 </div>
                 </div>
                 <div class="col-md-8">
-                <div class="form-group">
+                <div class="form-group <?php if(form_error('mac_address')) echo 'has-error';?>">
                   <label>Mac Address<span class="text-danger">*</span></label>
                   <input type="text" name="mac_address" value="<?php echo $this->input->post('mac_address'); ?>" class="form-control" placeholder="Contoh: B838617A7C8D" />
                   <span class"text-danger"><?php echo form_error('mac_address'); ?></span>
@@ -65,10 +65,10 @@
                 </div>
                 </div>
                 <div class="col-md-6">
-                <div class="form-group">
+                <div class="form-group <?php if(form_error('kondisi')) echo 'has-error';?>">
                   <label>Kondisi<span class="text-danger">*</span></label>
                   <select name="kondisi" class="form-control">
-                    <option value="">-- Pilih --</option>
+                    <option>-- Pilih --</option>
                     <?php
     								$kondisi_values = array(
     									'Baru'=>'BARU',
@@ -83,7 +83,7 @@
     								}
     								?>
                   </select>
-                  <span class"text-danger"><?php echo form_error('jenis_ap'); ?></span>
+                  <span class"text-danger"><?php echo form_error('kondisi'); ?></span>
                 </div>
                 </div>
                 <div class="col-md-12">

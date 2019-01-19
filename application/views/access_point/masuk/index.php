@@ -12,6 +12,11 @@
 
   <!-- Main content -->
   <section class="content">
+    <?php if($this->session->flashdata('success_hapus')) { ?>
+    <div class="alert alert-success alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><i class="icon fa fa-check"></i>Berhasil !</h4><?= $this->session->flashdata('success_hapus') ?>
+    </div><?php } ?>
     <div class="box box-success">
       <div class="box-header">
         <h3 class="box-title"><?php echo $subtitle; ?></h3>
@@ -36,7 +41,7 @@
         <table id="example" class="table table-bordered table-striped">
           <thead>
           <tr>
-            <th class="">No.</th>
+            <th>No.</th>
             <th>Tanggal Masuk</th>
             <th>Serial Number</th>
             <th>Mac Address</th>

@@ -26,6 +26,7 @@
             <th>Serial Number</th>
             <th>Mac Address</th>
             <th>Model</th>
+            <th>Kondisi</th>
             <th>Petugas</th>
             <th>Keperluan</th>
             <th>Action</th>
@@ -41,6 +42,7 @@
             <td><?php echo $keluar['serial_number']; ?></td>
             <td><?php echo $keluar['mac_address']; ?></td>
             <td><?php echo $keluar['jenis_ap']; ?></td>
+            <td><?php echo $keluar['kondisi']; ?></td>
             <td><?php echo $keluar['petugas']; ?></td>
             <td><?php echo $keluar['keperluan']; ?></td>
             <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal-edit-keluar">
