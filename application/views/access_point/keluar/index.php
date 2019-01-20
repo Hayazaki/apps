@@ -45,7 +45,7 @@
             <td><?php echo $keluar['kondisi']; ?></td>
             <td><?php echo $keluar['petugas']; ?></td>
             <td><?php echo $keluar['keperluan']; ?></td>
-            <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal-edit-keluar">
+            <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#">
                 <span class="fa fa-pencil"></span> Edit
                 </button>
                 <button type="button" class="btn btn-danger btn-xs disable" data-toggle="modal" data-target="#modal-danger">
