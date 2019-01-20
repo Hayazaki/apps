@@ -13,7 +13,7 @@
   <!-- Main content -->
   <section class="content">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-8">
         <div class="box box-success">
           <div class="box-header">
             <h3 class="box-title"><?php echo $subtitle; ?></h3>
@@ -46,16 +46,16 @@
                 </div>
                 <div class="col-md-8">
                 <div class="form-group <?php if(form_error('serial_number')) echo 'has-error';?>">
-                  <label>Serial Number<span class="text-danger">*</span></label>
-                  <input type="text" name="serial_number" value="<?php echo $this->input->post('serial_number'); ?>" class="form-control" placeholder="Contoh: KWC21270KX0" />
-                  <span class="text-danger"><?php echo form_error('serial_number'); ?></span>
+                  <label><span class="text-danger">*</span>Serial Number</label>
+                  <input type="text" name="serial_number" value="<?php echo $this->input->post('serial_number'); ?>" class="form-control" placeholder="Contoh: KWC212XXXXX" />
+                  <?php echo form_error('serial_number'); ?>
                 </div>
                 </div>
                 <div class="col-md-8">
                 <div class="form-group <?php if(form_error('mac_address')) echo 'has-error';?>">
-                  <label>Mac Address<span class="text-danger">*</span></label>
-                  <input type="text" name="mac_address" value="<?php echo $this->input->post('mac_address'); ?>" class="form-control" placeholder="Contoh: B838617A7C8D" />
-                  <span class"text-danger"><?php echo form_error('mac_address'); ?></span>
+                  <label><span class="text-danger">*</span>Mac Address</label>
+                  <input type="text" name="mac_address" value="<?php echo $this->input->post('mac_address'); ?>" class="form-control" placeholder="Contoh: B83861XXXXXX" />
+                  <?php echo form_error('mac_address'); ?>
                 </div>
                 </div>
                 <div class="col-md-6">
@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-md-6">
                 <div class="form-group <?php if(form_error('kondisi')) echo 'has-error';?>">
-                  <label>Kondisi<span class="text-danger">*</span></label>
+                  <label><span class="text-danger">*</span>Kondisi</label>
                   <select name="kondisi" class="form-control">
                     <option>-- Pilih --</option>
                     <?php
@@ -83,7 +83,6 @@
     								}
     								?>
                   </select>
-                  <span class"text-danger"><?php echo form_error('kondisi'); ?></span>
                 </div>
                 </div>
                 <div class="col-md-12">

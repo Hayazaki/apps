@@ -48,7 +48,12 @@
     $('#datepicker').datepicker({
       autoclose : true,
       format    : "yyyy-mm-dd"
-    }).datepicker("setDate",'now');
+      setDate   : 'now'
+    });
+    $('#datepicker-edit').datepicker({
+      autoclose : true,
+      format    :"yyyy-mm-dd"
+    });
   });
   $(function () {
     $('#example').DataTable({

@@ -16,7 +16,7 @@ class Apmasuk_model extends CI_Model
      */
     function get_apmasuk($sn)
     {
-        return $this->db->get_where('tb_apmasuk',array('serial_number'=>$sn))->row_array();
+        return $this->db->get_where('tb_apmasuk',array('id'=>$id))->row_array();
     }
 
     /*

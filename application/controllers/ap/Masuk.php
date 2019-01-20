@@ -23,9 +23,24 @@ class Masuk extends CI_Controller {
   {
 		$this->data['subtitle']	= "Input Barang Masuk";
 
-		$this->form_validation->set_rules('serial_number', 'Serial Number', 'required');
-		$this->form_validation->set_rules('mac_address','Mac Address','required');
-		$this->form_validation->set_rules('kondisi','Kondisi','required');
+		function alpha_numeric_space($serial_number){
+		if (! preg_match('/^[0-9A-Z\s]+$/', $serial_number)) {
+				return FALSE;
+		} else {
+				return TRUE;
+			}
+		}
+
+		$this->form_validation->set_rules('serial_number', 'Serial Number', 'trim|required|min_length[11]|alpha_numeric|alpha_numeric_space',
+																			array('required' => '%s tidak boleh kosong.',
+																						'alpha_numeric' => '%s harus berisi huruf dan angka saja.',
+																						'min_length' => '%s harus berisi minimal 11 karakter huruf dan angka.',
+																						'alpha_numeric_space' => '%s harus berisi huruf A-Z dan angka 0-9 tanpa dipisah spasi.'
+																						)
+																			);
+		$this->form_validation->set_rules('mac_address','Mac Address','trim|required',
+																			array('required' => '%s tidak boleh kosong.'));
+		$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
 
 		if($this->form_validation->run() === TRUE)
     {
@@ -45,6 +60,44 @@ class Masuk extends CI_Controller {
 			$this->session->set_flashdata('gagal_input', 'Mohon periksa kembali data yang akan diinput.');
 		}
 	}
+
+  public function edit($id)
+  {
+      $data['apmasuk'] = $this->Apmasuk_model->get_apmasuk($id);
+
+			$this->form_validation->set_rules('serial_number','Serial Number','trim|required|alpha_numeric|min_length[11]',
+																				array('required' => '%s tidak boleh kosong.',
+																							'alpha_numeric' => '%s harus berisi huruf dan angka saja.',
+																							'min_length' => '%s harus berisi minimal 11 karakter huruf dan angka.',
+																							)
+																				);
+			$this->form_validation->set_rules('mac_address','Mac Address','trim|required',
+																				array('required' => '%s tidak boleh kosong.')
+																				);
+
+      if(isset($data['apmasuk']['id']))
+      {
+
+				if($this->form_validation->run())
+		    {
+	              $params = array(
+					'tanggal_masuk' => $this->input->post('tanggal_masuk'),
+					'serial_number' => $this->input->post('serial_number'),
+					'mac_address' => $this->input->post('mac_address'),
+					'jenis_ap' => $this->input->post('jenis_ap'),
+					'kondisi' => $this->input->post('kondisi'),
+					'keterangan' => $this->input->post('keterangan'),
+	              );
+
+          $this->Apmasuk_model->update_apmasuk($id,$params);
+					$this->session->set_flashdata('success_edit', 'Data berhasil diupdate.');
+          redirect('ap/masuk/index');
+		    }
+		    else{
+	          $this->session->set_flashdata('gagal_edit', 'Data tidak berhasil diupdate, mohon cek kembali.');
+	  				}
+      }
+  }
 
 	public function remove($id)
 	{
