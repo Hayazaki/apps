@@ -78,7 +78,7 @@ class Masuk extends CI_Controller {
       if(isset($data['apmasuk']['id']))
       {
 
-				if($this->form_validation->run())
+				if($this->form_validation->run() === TRUE)
 		    {
 	              $params = array(
 					'tanggal_masuk' => $this->input->post('tanggal_masuk'),

@@ -12,11 +12,22 @@
 
   <!-- Main content -->
   <section class="content">
+    <!--ALERT FLASHDATA-->
     <?php if($this->session->flashdata('success_hapus')) { ?>
     <div class="alert alert-success alert-dismissible">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <h4><i class="icon fa fa-check"></i>Berhasil !</h4><?= $this->session->flashdata('success_hapus') ?>
     </div><?php } ?>
+    <?php if($this->session->flashdata('success_edit')) { ?>
+    <div class="alert alert-success alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><i class="icon fa fa-check"></i>Berhasil !</h4><?= $this->session->flashdata('success_edit') ?>
+    </div><?php } ?>
+    <?php if($this->session->flashdata('gagal_edit')) { ?>
+    <div class="alert alert-danger alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><i class="icon fa fa-ban"></i> Gagal !</h4><?= $this->session->flashdata('gagal_edit') ?>
+      <!--END ALERT FLASHDATA-->
     <div class="box box-success">
       <div class="box-header">
         <h3 class="box-title"><?php echo $subtitle; ?></h3>
@@ -64,7 +75,7 @@
             <td><?php echo $t['kondisi']; ?></td>
             <td><?php echo $t['keterangan']; ?></td>
             <td>
-              <a type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modalEditMasuk">
+              <a type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modalEditMasuk<?php echo $t['id']; ?>">
                 <span class="fa fa-pencil"></span> Edit
               </a>
               <a onclick="deleteConfirm('<?php echo site_url('ap/masuk/remove/'.$t['id']); ?>')" href="#!" class="btn btn-danger btn-xs">
@@ -91,7 +102,7 @@
   $kon         = $t['kondisi'];
   $ket         = $t['keterangan'];
   ?>
-<div class="modal modal-default fade" id="modalEditMasuk">
+<div class="modal modal-default fade" id="modalEditMasuk<?php echo $id; ?>">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
