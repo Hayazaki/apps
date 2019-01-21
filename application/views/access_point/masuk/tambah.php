@@ -40,7 +40,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" name="tanggal_masuk" value="<?php echo $this->input->post('tanggal_masuk'); ?>" class="form-control" id="datepicker" />
+                    <input type="text" name="tanggal_masuk" id="datepicker" value="<?php echo $this->input->post('tanggal_masuk'); ?>" class="form-control" />
                   </div>
                 </div>
                 </div>

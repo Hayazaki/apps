@@ -44,18 +44,17 @@
 	  $('#btn-delete').attr('href', url);
 	  $('#deleteModal').modal();
   }
-  $(function () { // Date Picker
+  $(function () { // Date Picker Edit
     $('#datepicker').datepicker({
       autoclose : true,
-      format    : "yyyy-mm-dd"
+      format    : "yyyy-mm-dd",
+      showButtonPanel : true
     });
   });
-  $(function () { // Date Picker Edit
-    $('#datepicker2').datepicker({
-      autoclose : true,
-      format    : "yyyy-mm-dd"
-    });
-  });
+  /* $('.datepicker').datepicker({
+    format    : 'yyyy/mm/dd',
+    autoclose : true,
+  }); */
   $(function () {
     $('#example').DataTable({
       'paging'      : true,
