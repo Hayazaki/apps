@@ -24,7 +24,7 @@ class Masuk extends CI_Controller {
 		$this->data['subtitle']	= "Input Barang Masuk";
 
 		function alpha_numeric_space($serial_number){
-		if (! preg_match('/^[0-9A-Z\s]+$/', $serial_number)) {
+		if (! preg_match('/^[0-9A-Za-z\s]+$/', $serial_number)) {
 				return FALSE;
 		} else {
 				return TRUE;
@@ -35,7 +35,7 @@ class Masuk extends CI_Controller {
 																			array('required' => '%s tidak boleh kosong.',
 																						'alpha_numeric' => '%s harus berisi huruf dan angka saja.',
 																						'min_length' => '%s harus berisi minimal 11 karakter huruf dan angka.',
-																						'alpha_numeric_space' => '%s harus berisi huruf A-Z dan angka 0-9 tanpa dipisah spasi.'
+																						'alpha_numeric_space' => '%s harus berisi huruf dan angka tanpa dipisah spasi atau karakter symbolic.'
 																						)
 																			);
 		$this->form_validation->set_rules('mac_address','Mac Address','trim|required',
@@ -46,9 +46,9 @@ class Masuk extends CI_Controller {
     {
         $params = array(
 			'tanggal_masuk' => $this->input->post('tanggal_masuk'),
-			'serial_number' => $this->input->post('serial_number'),
-			'mac_address' => $this->input->post('mac_address'),
-			'jenis_ap' => $this->input->post('jenis_ap'),
+			'serial_number' => strtoupper($this->input->post('serial_number')),
+			'mac_address' => strtoupper($this->input->post('mac_address')),
+			'jenis_ap' => strtoupper($this->input->post('jenis_ap')),
 			'kondisi' => $this->input->post('kondisi'),
 			'keterangan' => $this->input->post('keterangan'),
         );

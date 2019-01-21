@@ -82,6 +82,15 @@
 <!-- /.content-wrapper -->
 
 <!-- Modal Edit Masuk-->
+<?php foreach($apmasuk as $t):
+  $id          = $t['id'];
+  $tnggl_masuk = $t['tanggal_masuk'];
+  $sn          = $t['serial_number'];
+  $mac         = $t['mac_address'];
+  $model       = $t['jenis_ap'];
+  $kon         = $t['kondisi'];
+  $ket         = $t['keterangan'];
+  ?>
 <div class="modal modal-default fade" id="modalEditMasuk">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -91,7 +100,7 @@
         <h4 class="modal-title">Edit Data AP Masuk</h4>
       </div>
       <div class="modal-body">
-        <?php echo form_open('masuk/edit/'); ?>
+        <form role="form" action="index.html" method="post">
           <div class="box-body">
             <div class="form-group">
               <label>Tanggal Masuk</label>
@@ -99,45 +108,58 @@
                 <div class="input-group-addon">
                   <i class="fa fa-calendar"></i>
                 </div>
-                <input type="text" name="tanggal" class="form-control" id="datepicker" placeholder="YYYY-MM-DD">
+                <input type="text" name="tanggal_masuk" value="<?php echo $tnggl_masuk; ?>" class="form-control" id="datepicker" placeholder="YYYY-MM-DD"/>
               </div>
             </div>
             <div class="form-group">
               <label><span class="text-danger">*</span>Serial Number</label>
-              <input type="text" class="form-control" placeholder="Contoh: KWC212xxxxx">
+              <input type="text" name="serial_number" value="<?php echo $sn; ?>" class="form-control" placeholder="Contoh: KWC212xxxxx"/>
             </div>
             <div class="form-group">
               <label><span class="text-danger">*</span>Mac Address</label>
-              <input type="text" class="form-control" placeholder="Contoh: B83861xxxxxx">
+              <input type="text" name="mac_address" value="<?php echo $mac; ?>" class="form-control" placeholder="Contoh: B83861xxxxxx"/>
             </div>
             <div class="form-group">
               <label>Model AP</label>
-              <input type="text" class="form-control" placeholder="Contoh: AIR-AP1832I-F-K9">
+              <input type="text" name="jenis_ap" value="<?php echo $model; ?>" class="form-control" placeholder="Contoh: AIR-AP1832I-F-K9"/>
             </div>
             <div class="form-group">
               <label><span class="text-danger">*</span>Kondisi</label>
               <select class="form-control">
-                <option>-- Pilih --</option>
-                <option>BARU</option>
-                <option>BEKAS</option>
-                <option>RUSAK</option>
+                <option value="">-- Pilih --</option>
+                <?php
+                $kondisi_values = array(
+                  'Baru'=>'BARU',
+                  'Bekas'=>'BEKAS',
+                  'Rusak'=>'RUSAK',
+                );
+                foreach($kondisi_values as $value => $display_text)
+                {
+                  $selected = ($value == $this->input->post('kondisi')) ? ' selected="selected"' : "";
+
+                  echo '<option value="'.$value.'" '.$selected.'>'.$display_text.'</option>';
+                }
+                ?>
               </select>
             </div>
             <div class="form-group">
               <label>Keterangan</label>
-              <textarea class="form-control" rows="3" placeholder="Masukan keterangan disini..."></textarea>
+              <textarea class="form-control" name="keterangan" rows="3" placeholder="Masukan keterangan disini..."><?php echo $ket; ?></textarea>
             </div>
             <div class="form-group">
               <p class="help-block">(<span class="text-danger">*</span>) Wajib diisi.</p>
               <p>Pastikan semua telah terisi dengan benar sebelum menyimpan.</p>
             </div>
           </div>
-        <?php echo form_close(); ?>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
-        <button type="button" name="simpan" class="btn btn-success">Simpan</button>
+        <button type="submit" class="btn btn-success">
+          <i class="fa fa-check"></i> Simpan
+        </button>
       </div>
     </div>
   </div>
 </div>
+<?php endforeach; ?>
