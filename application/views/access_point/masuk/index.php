@@ -37,9 +37,9 @@
           </button>
           <ul class="dropdown-menu" role="menu">
             <li><a href="<?php echo site_url('ap/masuk/tambah'); ?>"><span class="fa fa-plus"></span>Per-Unit</a></li>
-            <li class="disabled"><a href="#"><span class="fa fa-file-text"></span>Import .txt (vBeta)</a></li>
-            <li class="disabled"><a href="#"><span class="fa fa-file-excel-o"></span>Import .xlsx (vBeta)</a></li>
-            <li class="disabled"><a href="#"><span class="fa fa-file"></span>Import .csv (vBeta)</a></li>
+            <li class="disabled"><a href="#"><span class="fa fa-file-text"></span>Import .txt (Update Selanjutnya)</a></li>
+            <li class="disabled"><a href="#"><span class="fa fa-file-excel-o"></span>Import .xlsx (Update Selanjutnya)</a></li>
+            <li class="disabled"><a href="#"><span class="fa fa-file"></span>Import .csv (Update Selanjutnya)</a></li>
           </ul>
         </div>
       </div>

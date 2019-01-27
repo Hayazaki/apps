@@ -47,8 +47,7 @@
   $(function () { // Date Picker Edit
     $('#datepicker').datepicker({
       autoclose : true,
-      format    : "yyyy-mm-dd",
-      showButtonPanel : true
+      format    : 'yyyy-mm-dd',
     });
   });
   /* $('.datepicker').datepicker({

@@ -63,7 +63,7 @@ class Masuk extends CI_Controller {
 
   public function edit($id)
   {
-			$this->data['subtitle'] = "Edit Stock Masuk";
+			$this->data['subtitle'] = "Edit Barang Masuk";
       $this->data['apmasuk'] = $this->Apmasuk_model->get_apmasuk($id);
 
 			$this->form_validation->set_rules('serial_number','Serial Number','trim|required|alpha_numeric|min_length[11]',

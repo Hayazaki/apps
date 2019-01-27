@@ -89,7 +89,7 @@
                 <div class="form-group">
                   <p class="help-block">(<span class="text-danger">*</span>) Wajib diisi.</p>
                   <p>*Pastikan semua telah terisi dengan benar sebelum menyimpan.</p>
-                  <p>*Pastikan kolom kondisi telah di update dengan benar sebelum menyimpan.</p>
+                  <p>*Kolom kondisi akan mengikuti data sebelumnya jika tidak diubah.</p>
                 </div>
                 </div>
               </div>
