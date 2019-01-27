@@ -14,4 +14,9 @@ class Stockap_model extends CI_Model{
     return $this->db->get('tb_stockap')->result_array();
   }
 
+  public function get_stockap($id)
+  {
+    return $this->db->get_where('tb_stockap',array('id'=>$id))->row_array();
+  }
+
 }

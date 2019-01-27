@@ -17,4 +17,9 @@ class Stock extends CI_Controller {
 
 		$this->template->display('access_point/stock/index', $this->data);
 	}
+
+	public function keluarkan()
+	{
+	  $this->data['stockap'] = $this->Stockap_model->get_stockap($id);
+	}
 }

@@ -14,7 +14,12 @@ class Keluar extends CI_Controller {
 	{
 		$this->data['subtitle'] = "Data Access Point Keluar";
 		$this->data['apkeluar']	= $this->Apkeluar_model->getall_apkeluar();
-		
+
 		$this->template->display('access_point/keluar/index', $this->data);
+	}
+
+	public function edit()
+	{
+	  $this->data['subtitle'] = "Edit Data Access Point Keluar";
 	}
 }

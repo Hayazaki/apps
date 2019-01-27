@@ -48,9 +48,6 @@
             <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#">
                 <span class="fa fa-pencil"></span> Edit
                 </button>
-                <button type="button" class="btn btn-danger btn-xs disable" data-toggle="modal" data-target="#modal-danger">
-                  <span class="fa fa-trash"></span> Hapus
-                </button>
             </td>
           </tr>
           <?php } ?>
