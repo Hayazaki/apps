@@ -39,7 +39,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('assets/template/')?>dist/js/demo.js"></script>
 <!-- Delete Modal -->
-<script>
+<script type="text/javascript">
   function deleteConfirm(url){ // Modal Delete
 	  $('#btn-delete').attr('href', url);
 	  $('#deleteModal').modal();

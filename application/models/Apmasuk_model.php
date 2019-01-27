@@ -14,7 +14,7 @@ class Apmasuk_model extends CI_Model
     /*
      * Get apmasuk by sn
      */
-    function get_apmasuk($sn)
+    function get_apmasuk($id)
     {
         return $this->db->get_where('tb_apmasuk',array('id'=>$id))->row_array();
     }

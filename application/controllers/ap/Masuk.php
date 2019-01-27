@@ -14,7 +14,7 @@ class Masuk extends CI_Controller {
 	public function index()
 	{
 		$this->data['subtitle'] = "Data Access Point Masuk";
-		$this->data['apmasuk'] = $this->Apmasuk_model->getall_apmasuk();
+		$this->data['all_apmasuk'] = $this->Apmasuk_model->getall_apmasuk();
 
 		$this->template->display('access_point/masuk/index', $this->data);
 	}
@@ -63,7 +63,8 @@ class Masuk extends CI_Controller {
 
   public function edit($id)
   {
-      $data['apmasuk'] = $this->Apmasuk_model->get_apmasuk($id);
+			$this->data['subtitle'] = "Edit Stock Masuk";
+      $this->data['apmasuk'] = $this->Apmasuk_model->get_apmasuk($id);
 
 			$this->form_validation->set_rules('serial_number','Serial Number','trim|required|alpha_numeric|min_length[11]',
 																				array('required' => '%s tidak boleh kosong.',
@@ -75,7 +76,7 @@ class Masuk extends CI_Controller {
 																				array('required' => '%s tidak boleh kosong.')
 																				);
 
-      if(isset($data['apmasuk']['id']))
+      if(isset($this->data['apmasuk']['id']))
       {
 
 				if($this->form_validation->run() === TRUE)
@@ -94,6 +95,7 @@ class Masuk extends CI_Controller {
           redirect('ap/masuk/index');
 		    }
 		    else{
+						$this->template->display('access_point/masuk/edit', $this->data);
 	          $this->session->set_flashdata('gagal_edit', 'Data tidak berhasil diupdate, mohon cek kembali.');
 	  				}
       }
