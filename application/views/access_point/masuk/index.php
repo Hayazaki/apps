@@ -72,7 +72,7 @@
             <td><?php echo $table['keterangan']; ?></td>
             <td>
               <a type="button" class="btn btn-primary btn-xs" onclick="window.location='<?php echo site_url('ap/masuk/edit/'.$table['id']); ?>' ">
-                <span class="fa fa-pencil"></span> Edit
+                <span class="fa fa-edit"></span> Edit
               </a>
               <a onclick="deleteConfirm('<?php echo site_url('ap/masuk/remove/'.$table['id']); ?>')" href="#!" class="btn btn-danger btn-xs">
                 <span class="fa fa-trash"></span> Hapus

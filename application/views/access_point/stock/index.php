@@ -42,7 +42,7 @@
             <td><?php echo $stock['kondisi']; ?></td>
             <td><?php echo $stock['keterangan']; ?></td>
             <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#">
-                <span class="fa fa-pencil"></span> Edit
+                <span class="fa fa-edit"></span> Edit
               </button>
               <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modal-keluarkan">
                   <span class="fa fa-mail-forward"></span> Keluarkan

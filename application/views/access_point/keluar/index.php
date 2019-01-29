@@ -46,7 +46,7 @@
             <td><?php echo $keluar['petugas']; ?></td>
             <td><?php echo $keluar['keperluan']; ?></td>
             <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#">
-                <span class="fa fa-pencil"></span> Edit
+                <span class="fa fa-edit"></span> Edit
                 </button>
             </td>
           </tr>

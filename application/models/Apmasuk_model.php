@@ -6,17 +6,15 @@
 
 class Apmasuk_model extends CI_Model
 {
-    function __construct()
-    {
-        parent::__construct();
-    }
+
+    private $_table = "tb_apmasuk";
 
     /*
      * Get apmasuk by sn
      */
     function get_apmasuk($id)
     {
-        return $this->db->get_where('tb_apmasuk',array('id'=>$id))->row_array();
+        return $this->db->get_where($this->_table,array('id'=>$id))->row_array();
     }
 
     /*
@@ -25,7 +23,7 @@ class Apmasuk_model extends CI_Model
     function getall_apmasuk()
     {
         $this->db->order_by('id', 'desc');
-        return $this->db->get('tb_apmasuk')->result_array();
+        return $this->db->get($this->_table)->result_array();
     }
 
     /*
@@ -33,7 +31,7 @@ class Apmasuk_model extends CI_Model
      */
     function add_apmasuk($params)
     {
-        $this->db->insert('tb_apmasuk',$params);
+        $this->db->insert($this->_table,$params);
         return $this->db->insert_id();
     }
 
@@ -43,7 +41,7 @@ class Apmasuk_model extends CI_Model
     function update_apmasuk($id,$params)
     {
         $this->db->where('id',$id);
-        return $this->db->update('tb_apmasuk',$params);
+        return $this->db->update($this->_table,$params);
     }
 
     /*
@@ -51,6 +49,6 @@ class Apmasuk_model extends CI_Model
      */
     function delete_apmasuk($id)
     {
-        $this->db->delete('tb_apmasuk',array('id' => $id));
+        return $this->db->delete($this->_table,array('id' => $id));
     }
 }
