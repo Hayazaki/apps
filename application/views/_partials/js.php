@@ -38,6 +38,14 @@
 <script src="<?php echo base_url('assets/template/')?>dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('assets/template/')?>dist/js/demo.js"></script>
+<!-- jszip -->
+<script src="<?php echo base_url('assets/template/')?>additional/jszip/jszip.min.js"></script>
+<!-- pdfmake -->
+<script src="<?php echo base_url('assets/template/')?>additional/pdfmake/build/pdfmake.min.js"></script>
+<script src="<?php echo base_url('assets/template/')?>additional/pdfmake/build/vfs_fonts.js"></script>
+<!-- Buttons -->
+<script src="<?php echo base_url('assets/template/')?>additional/buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo base_url('assets/template/')?>additional/buttons/js/buttons.html5.min.js"></script>
 <!-- Delete Modal -->
 <script type="text/javascript">
   function deleteConfirm(url){ // Modal Delete
@@ -61,9 +69,8 @@
             'copyHtml5',
             'excelHtml5',
             'csvHtml5',
+            'pdfHtml5'
         ]
-      "scrollX"     : true,
-      "autoWidth"   : false,
     });
   });
 </script>
