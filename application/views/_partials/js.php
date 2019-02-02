@@ -44,23 +44,26 @@
 	  $('#btn-delete').attr('href', url);
 	  $('#deleteModal').modal();
   }
-  $(function () { // Date Picker Edit
+  $(function() { // Date Picker Edit
     $('#datepicker').datepicker({
-      autoclose : true,
-      format    : 'yyyy-mm-dd',
+      autoclose: true,
+      format: "yyyy-mm-dd",
+      todayHighlight: true,
+      orientation: "left auto",
+      todayBtn: true,
+      todayHighlight: true,
     });
   });
-  /* $('.datepicker').datepicker({
-    format    : 'yyyy/mm/dd',
-    autoclose : true,
-  }); */
-  $(function () {
+  $(document).ready(function() {
     $('#example').DataTable({
-      'paging'      : true,
-      'searching'   : true,
-      'ordering'    : true,
-      'info'        : true,
-      'hover'       : true
+      dom: 'Bfrtip',
+        buttons: [
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+        ]
+      "scrollX"     : true,
+      "autoWidth"   : false,
     });
   });
 </script>

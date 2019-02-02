@@ -40,7 +40,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" name="tanggal_masuk" id="datepicker" value="<?php echo $this->input->post('tanggal_masuk'); ?>" class="form-control" />
+                    <input type="text" autocomplete="off" name="tanggal_masuk" id="datepicker" value="<?php echo $this->input->post('tanggal_masuk'); ?>" class="form-control" />
                   </div>
                 </div>
                 </div>
@@ -68,7 +68,7 @@
                 <div class="form-group <?php if(form_error('kondisi')) echo 'has-error';?>">
                   <label><span class="text-danger">*</span>Kondisi</label>
                   <select name="kondisi" class="form-control">
-                    <option>-- Pilih --</option>
+                    <option disabled selected value> -- Pilih -- </option>
                     <?php
     								$kondisi_values = array(
     									'Baru'=>'BARU',
